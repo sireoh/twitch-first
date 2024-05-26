@@ -1,5 +1,10 @@
-﻿function scanFirst() {
-    return prompt("Who is first? ","noone atm");
+﻿function first() {
+    let user = "";
+    user = prompt("Who is first? ","noone atm");
+    $("#text").html(`☝🥇first: ${user}`);
 };
 
-document.getElementById("text").innerHTML = `☝🥇first: ${scanFirst()}`;
+$(document).ready(() => {
+    first();
+    $("body").on("click", first);
+  });
